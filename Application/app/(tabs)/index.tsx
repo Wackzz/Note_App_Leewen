@@ -1,15 +1,23 @@
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { Button, StyleSheet, Text, View } from 'react-native';
+
+
+
+function test() {
+  console.log("test");
+}
 
 export default function Index() {
   return (
-    <View style={styles.container}>
+    <><View style={styles.title}>
       <Text style={styles.text}>Home screen</Text>
-    </View>
+    </View><Button title="appuyez ici" onPress={test} /></>
+    
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  title: {
     flex: 1,
     backgroundColor: '#25292e',
     alignItems: 'center',
@@ -17,6 +25,19 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#fff',
+    flex: 1,
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    padding: 20,
   },
+  button : {
+    color: '#fff',
+    flex: 1,
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    padding: 20,
+  }
 });
 
